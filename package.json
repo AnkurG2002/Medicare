@@ -1,0 +1,31 @@
+{
+    "name": "doctor-patient",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "",
+    "main": "index.js",
+    "engines": {
+        "node": "18.10.0",
+        "npm": "9.6.4"
+    },
+    "scripts": {
+        "client-install": "npm install --prefix client",
+        "server": "nodemon server.js",
+        "client": "npm start --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "start": "node server.js",
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "jsonwebtoken": "^9.0.2",
+        "moment": "^2.29.4",
+        "mongodb": "^6.1.0",
+        "mongoose": "^7.5.3"
+    }
+}
