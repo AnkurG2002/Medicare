@@ -143,9 +143,7 @@ function Layout({ children }) {
                                 <i className="ri-notification-line header-action-icon px-1"></i>
                             </Badge>
 
-                            <Link className="anchor mx-2" to="/profile">
-                                {user?.name}
-                            </Link>
+                            {user?.name}
                         </div>
                     </div>
 
