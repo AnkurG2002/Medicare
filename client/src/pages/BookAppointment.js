@@ -7,6 +7,7 @@ import { toast } from "react-hot-toast";
 import axios from "axios";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import dayjs from "dayjs";
+import { url } from "../App";
 
 function BookAppointment() {
     const [isAvailable, setIsAvailable] = useState(false);
@@ -22,7 +23,7 @@ function BookAppointment() {
         try {
             dispatch(showLoading());
             const response = await axios.post(
-                "/api/doctor/get-doctor-info-by-id",
+                `${url}/api/doctor/get-doctor-info-by-id`,
                 {
                     doctorId: params.doctorId,
                 },
@@ -48,7 +49,7 @@ function BookAppointment() {
         try {
             dispatch(showLoading());
             const response = await axios.post(
-                "/api/user/check-booking-availability",
+                `${url}/api/user/check-booking-availability`,
                 {
                     doctorId: params.doctorId,
                     date: date,
@@ -79,7 +80,7 @@ function BookAppointment() {
         try {
             dispatch(showLoading());
             const response = await axios.post(
-                "/api/user/book-appointment",
+                `${url}/api/user/book-appointment`,
                 {
                     doctorId: params.doctorId,
                     userId: user._id,

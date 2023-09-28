@@ -15,6 +15,8 @@ import BookAppointment from "./pages/BookAppointment";
 import Appointments from "./pages/Appointments";
 import DoctorAppointments from "./pages/Doctor/DoctorAppointments";
 
+export const url = "https://medic-t3pz.onrender.com"; // production
+
 function App() {
     const { loading } = useSelector((state) => state.alerts);
     return (

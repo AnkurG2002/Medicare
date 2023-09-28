@@ -5,6 +5,7 @@ import { showLoading, hideLoading } from "../redux/alertsSlice";
 import axios from "axios";
 import { Table } from "antd";
 import dayjs from "dayjs";
+import { url } from "../App";
 
 function Appointments() {
     const [appointments, setAppointments] = useState([]);
@@ -13,7 +14,7 @@ function Appointments() {
         try {
             dispatch(showLoading());
             const response = await axios.get(
-                "/api/user/get-appointments-by-user-id",
+                `${url}/api/user/get-appointments-by-user-id`,
                 {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem(

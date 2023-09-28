@@ -6,6 +6,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import DoctorForm from "../components/DoctorForm";
 import dayjs from "dayjs";
+import { url } from "../App";
 
 function ApplyDoctor() {
     const dispatch = useDispatch();
@@ -16,7 +17,7 @@ function ApplyDoctor() {
         try {
             dispatch(showLoading());
             const response = await axios.post(
-                "/api/user/apply-doctor-account",
+                `${url}/api/user/apply-doctor-account`,
                 {
                     ...values,
                     userId: user._id,

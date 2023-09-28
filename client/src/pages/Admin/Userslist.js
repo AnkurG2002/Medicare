@@ -5,6 +5,7 @@ import { showLoading, hideLoading } from "../../redux/alertsSlice";
 import axios from "axios";
 import { Table } from "antd";
 import dayjs from "dayjs";
+import { url } from "../../App";
 
 function Userslist() {
     const [users, setUsers] = useState([]);
@@ -13,7 +14,7 @@ function Userslist() {
     const getUsersData = async () => {
         try {
             dispatch(showLoading());
-            const response = await axios.get("/api/admin/get-all-users", {
+            const response = await axios.get(`${url}/api/admin/get-all-users`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },

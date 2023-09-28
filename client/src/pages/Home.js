@@ -5,6 +5,7 @@ import { Col, Row } from "antd";
 import Doctor from "../components/Doctor";
 import Layout from "../components/Layout";
 import { showLoading, hideLoading } from "../redux/alertsSlice";
+import { url } from "../App";
 
 function Home() {
     const [doctors, setDoctors] = useState([]);
@@ -14,7 +15,7 @@ function Home() {
         try {
             dispatch(showLoading());
             const response = await axios.get(
-                "/api/user/get-all-approved-doctors",
+                `${url}/api/user/get-all-approved-doctors`,
                 {
                     headers: {
                         Authorization:

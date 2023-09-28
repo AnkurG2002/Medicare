@@ -6,6 +6,7 @@ import axios from "axios";
 import { Table } from "antd";
 import dayjs from "dayjs";
 import toast from "react-hot-toast";
+import { url } from "../../App";
 
 function DoctorsList() {
     const [doctors, setDoctors] = useState([]);
@@ -14,11 +15,16 @@ function DoctorsList() {
     const getDoctorsData = async () => {
         try {
             dispatch(showLoading());
-            const response = await axios.get("/api/admin/get-all-doctors", {
-                headers: {
-                    Authorization: `Bearer ${localStorage.getItem("token")}`,
-                },
-            });
+            const response = await axios.get(
+                `${url}/api/admin/get-all-doctors`,
+                {
+                    headers: {
+                        Authorization: `Bearer ${localStorage.getItem(
+                            "token"
+                        )}`,
+                    },
+                }
+            );
             dispatch(hideLoading());
             if (response.data.success) {
                 setDoctors(response.data.data);
@@ -32,7 +38,7 @@ function DoctorsList() {
         try {
             dispatch(showLoading());
             const response = await axios.post(
-                "/api/admin/change-doctor-account-status",
+                `${url}/api/admin/change-doctor-account-status`,
                 { doctorId: record._id, status: status },
                 {
                     headers: {
