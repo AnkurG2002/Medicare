@@ -4,11 +4,16 @@ import db from "./config/mongoose.js";
 import userRoute from "./routes/userRoute.js";
 import adminRoute from "./routes/adminRoute.js";
 import doctorRoute from "./routes/doctorsRoute.js";
+import cors from "cors";
 
 dotenv.config();
+const corsOptions = {
+    origin: "*",
+};
 
 const app = express();
 app.use(express.json());
+app.use(cors(corsOptions));
 
 app.use("/api/user", userRoute);
 app.use("/api/admin", adminRoute);
