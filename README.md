@@ -12,6 +12,7 @@
 
 ![image](https://github.com/AnkurG2002/Medicare/assets/102753833/14489640-7f9b-41f3-9a6a-e06c29a4ea43)
 ![image](https://github.com/AnkurG2002/Medicare/assets/102753833/c993221c-2e2f-4f6f-a91e-39cd2e7c7d75)
+![image](https://github.com/AnkurG2002/Medicare/assets/102753833/60346a52-2b21-4c9b-88b4-3a1e7676c161)
 
 ## Tech Used
 
