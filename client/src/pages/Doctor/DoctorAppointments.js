@@ -6,6 +6,7 @@ import { toast } from "react-hot-toast";
 import axios from "axios";
 import { Table } from "antd";
 import dayjs from "dayjs";
+import { url } from "../../App";
 
 function DoctorAppointments() {
     const [appointments, setAppointments] = useState([]);
@@ -14,7 +15,7 @@ function DoctorAppointments() {
         try {
             dispatch(showLoading());
             const response = await axios.get(
-                "/api/doctor/get-appointments-by-doctor-id",
+                `${url}/api/doctor/get-appointments-by-doctor-id`,
                 {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem(
@@ -36,7 +37,7 @@ function DoctorAppointments() {
         try {
             dispatch(showLoading());
             const response = await axios.post(
-                "/api/doctor/change-appointment-status",
+                `${url}/api/doctor/change-appointment-status`,
                 { appointmentId: record._id, status: status },
                 {
                     headers: {

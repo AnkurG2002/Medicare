@@ -7,6 +7,7 @@ import axios from "axios";
 import Layout from "../../components/Layout";
 import DoctorForm from "../../components/DoctorForm";
 import dayjs from "dayjs";
+import { url } from "../../App";
 
 function Profile() {
     const { user } = useSelector((state) => state.user);
@@ -19,7 +20,7 @@ function Profile() {
         try {
             dispatch(showLoading());
             const response = await axios.post(
-                "/api/doctor/update-doctor-profile",
+                `${url}/api/doctor/update-doctor-profile`,
                 {
                     ...values,
                     userId: user._id,
@@ -53,7 +54,7 @@ function Profile() {
         try {
             dispatch(showLoading());
             const response = await axios.post(
-                "/api/doctor/get-doctor-info-by-user-id",
+                `${url}/api/doctor/get-doctor-info-by-user-id`,
                 {
                     userId: params.userId,
                 },

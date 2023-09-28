@@ -10,8 +10,8 @@
 
 ## Websites's Screen Shot
 
-![image](https://github.com/AnkurG2002/Movie-App/assets/102753833/5c24ee77-e446-4cce-8f64-bbd1f356ebaa)
-![image](https://github.com/AnkurG2002/Movie-App/assets/102753833/2cb84514-d9e3-47ef-a472-c9fa93f620cc)
+![image](https://github.com/AnkurG2002/Medicare/assets/102753833/14489640-7f9b-41f3-9a6a-e06c29a4ea43)
+![image](https://github.com/AnkurG2002/Medicare/assets/102753833/c993221c-2e2f-4f6f-a91e-39cd2e7c7d75)
 
 ## Tech Used
 
